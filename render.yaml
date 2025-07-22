@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: portfolio-django-backend
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn portfolio.wsgi:application"
+    workingDir: backend
+    region: oregon
+    branch: main
+    autoDeploy: true
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: portfolio.settings
+      - key: PYTHON_VERSION
+        value: 3.10
+
+staticSites:
+  - name: portfolio-frontend
+    buildCommand: "npm run build"
+    publishDir: frontend/dist
+    rootDir: frontend
+    branch: main
+    autoDeploy: true
