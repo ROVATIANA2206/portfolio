@@ -1,0 +1,131 @@
+/* Reset CSS complet pour éliminer les espaces blancs */
+
+/* Reset universel */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* HTML et Body à 100% */
+  html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Empêche le scroll horizontal */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+  
+  /* Root div (React) */
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Container principal de votre app */
+  .app {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Reset pour tous les éléments de section */
+  section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Classes utilitaires pour forcer pleine largeur */
+  .full-width {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+  
+  .full-screen {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Reset des marges par défaut des navigateurs */
+  body {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Cache la scrollbar horizontale si elle apparaît */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Pour les conteneurs avec container mx-auto */
+  .container-full {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .container-full {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .container-full {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+  
+  /* Animations personnalisées */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  /* Media queries pour responsive */
+  @media (max-width: 768px) {
+    .container-full {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  /* Fix pour les éléments qui débordent */
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
+  
+  /* Classe pour forcer l'affichage plein écran */
+  .viewport-full {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+  }
